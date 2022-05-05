@@ -1,8 +1,11 @@
 ARG VS
-FROM php-fpm:$VS
+FROM php-cli:$VS
 ARG VS
 
 COPY *.sh ./
-RUN bash -ex php-qa.sh $VS
+RUN bash -ex php-fpm.sh $VS
+
+EXPOSE	9000
+CMD		php-fpm$VS -O
 
 LABEL maintainer="Mihai Stancu <mihai.stancu@neurony.ro>"
