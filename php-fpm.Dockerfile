@@ -1,5 +1,6 @@
 ARG VS
-FROM php-cli:$VS
+ARG ORG
+FROM $ORG/php-cli:$VS
 ARG VS
 
 COPY *.sh ./

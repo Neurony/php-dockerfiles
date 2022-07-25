@@ -1,5 +1,6 @@
 ARG VS
-FROM php-fpm:$VS
+ARG ORG
+FROM $ORG/php-fpm:$VS
 ARG VS
 
 COPY *.sh ./

@@ -7,7 +7,7 @@ source common.sh;
 VS=$1; shift;
 
 sed -i 's:^path-exclude=/usr/share/man:#path-exclude=/usr/share/man:' /etc/dpkg/dpkg.cfg.d/excludes
-packages																																			\
+nrn-add-packages packages																											\
 		cron																																			\
 		git																																				\
 		inetutils-ping																														\

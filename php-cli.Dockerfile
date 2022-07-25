@@ -1,5 +1,6 @@
 ARG VS
-FROM php-base:$VS
+ARG ORG
+FROM $ORG/php-base:$VS
 ARG VS
 
 COPY *.sh ./

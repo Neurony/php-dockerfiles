@@ -1,5 +1,6 @@
 ARG VS
-FROM php-qa:$VS
+ARG ORG
+FROM $ORG/php-qa:$VS
 ARG VS
 
 COPY *.sh ./
